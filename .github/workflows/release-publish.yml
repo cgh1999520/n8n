@@ -1,13 +1,9 @@
 name: 'Release: Publish'
 
 on:
-  watch:
-    types: started
-  pull_request:
-    types:
-      - closed
+  push:
     branches:
-      - 'release/*'
+      - master
 
 jobs:
   # publish-to-npm:
