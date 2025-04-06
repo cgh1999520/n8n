@@ -115,8 +115,8 @@ jobs:
           provenance: false
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/n8n:${{ needs.publish-to-npm.outputs.release }}
-            ghcr.io/${{ github.repository_owner }}/n8n:${{ needs.publish-to-npm.outputs.release }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/n8n-cn:${{ needs.publish-to-npm.outputs.release }}
+            ghcr.io/${{ github.repository_owner }}/n8n-cn:${{ needs.publish-to-npm.outputs.release }}
 
   create-github-release:
     name: Create a GitHub Release
