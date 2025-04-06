@@ -71,7 +71,6 @@ jobs:
     name: Publish to DockerHub
     # needs: [publish-to-npm]
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
     timeout-minutes: 15
 
     steps:
