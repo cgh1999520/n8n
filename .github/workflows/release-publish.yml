@@ -105,13 +105,13 @@ jobs:
         with:
           context: ./docker/images/n8n
           build-args: |
-            N8N_VERSION=${{ needs.publish-to-npm.outputs.release }}
+            N8N_VERSION=latest
           platforms: linux/amd64,linux/arm64
           provenance: false
           push: true
           tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/n8n-cn:${{ needs.publish-to-npm.outputs.release }}
-            ghcr.io/${{ github.repository_owner }}/n8n-cn:${{ needs.publish-to-npm.outputs.release }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/n8n-cn:latest
+            ghcr.io/${{ github.repository_owner }}/n8n-cn:latest
 
   create-github-release:
     name: Create a GitHub Release
